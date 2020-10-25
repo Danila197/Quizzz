@@ -51,7 +51,31 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset" style="display: block">
-              <div class="form__title"></div>
+              <div class="form__title">Укажите площадь Вашей квартиры/дома?</div>
+              <div class="form__column">
+                <div class="form__group active-checkbox">
+                  <input type="checkbox" name="user_check_1" id="check_1" class="form__input" value="Менее 50 кв м" />
+                  <label for="check_1" class="form__label-checkbox">Менее 50 кв м</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="checkbox"
+                    name="user_check_2"
+                    id="check_2"
+                    class="form__input"
+                    value="От 50 до 100 кв м"
+                  />
+                  <label for="check_2" class="form__label-checkbox">От 50 до 100 кв м</label>
+                </div>
+                <div class="form__group">
+                  <input type="checkbox" name="user_check_3" id="check_3" class="form__input" value="Более 100 кв м" />
+                  <label for="check_3" class="form__label-checkbox">Более 100 кв м</label>
+                </div>
+              </div>
+              <div class="form-button form-button__indent">
+                <button class="form-button__btn-prev"></button>
+                <button class="button form-button__btn-next button--primary">Далее</button>
+              </div>
             </fieldset>
             <fieldset class="form__fieldset" style="display: none"></fieldset>
             <fieldset class="form__fieldset" style="display: none"></fieldset>
