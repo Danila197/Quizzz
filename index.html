@@ -10,8 +10,64 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header"></header>
-    <footer class="footer"></footer>
+    <div class="pass-test pass-test__content">
+      <button class="button pass-test__button button--primary">Пройти тест</button>
+    </div>
+    <div class="overlay"></div>
+    <div class="quiz">
+      <div class="quiz__content">
+        <div class="quiz-head">
+          <a href="index.html" class="quiz-head__logo">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+          <strong class="quiz-head__hint">Подкажем, какая уборка подходит для Вас</strong>
+        </div>
+        <div class="quiz-body">
+          <form action="#" class="form quiz-body__form" method="POST">
+            <fieldset class="form__fieldset" style="display: none">
+              <div class="form__title">Ваша квартира после ремонта?</div>
+              <div class="form__wrap">
+                <label for="label-choice-yes_first" class="form__label-radio active-radio">
+                  <input class="form__radio" type="radio" name="choice-first" value="Да" id="label-choice-yes_first" />
+                  <div class="form__choice">
+                    <div class="form__image">
+                      <img src="./img/qu1.jpg" alt="quiz-1" />
+                    </div>
+                    <div class="form__answer">Да</div>
+                  </div>
+                </label>
+                <label for="label-choice-no_first" class="form__label-radio">
+                  <input class="form__radio" type="radio" name="choice-first" value="Нет" id="label-choice-no_first" />
+                  <div class="form__choice">
+                    <div class="form__image">
+                      <img src="./img/qu2.jpg" alt="quiz-2" />
+                    </div>
+                    <div class="form__answer">Нет</div>
+                  </div>
+                </label>
+              </div>
+              <div class="form-button form-button__indent">
+                <button class="button form-button__btn-next button--primary">Далее</button>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset" style="display: block">
+              <div class="form__title"></div>
+            </fieldset>
+            <fieldset class="form__fieldset" style="display: none"></fieldset>
+            <fieldset class="form__fieldset" style="display: none"></fieldset>
+            <fieldset class="form__fieldset" style="display: none"></fieldset>
+          </form>
+        </div>
+        <div class="quiz-position">
+          <div class="quiz-position__bg">
+            <span class="quiz-position__on">Тест пройден на</span>
+            <div class="quiz-position__percent"><span id="quiz-position__percent-change">25</span> %</div>
+            <span class="quiz-position__find-out">Узнайте, какая скидка ждет вас в конце теста!</span>
+            <div class="quiz-position__image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
