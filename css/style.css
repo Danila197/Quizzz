@@ -147,10 +147,6 @@ button {
 .quiz-body {
   padding: 60px 0 47px 64px;
 }
-.form {
-}
-.quiz-body__form {
-}
 
 /*---Первый Fielset с первого экрана--*/
 .form__fieldset {
@@ -190,8 +186,7 @@ button {
 .form__radio {
   display: none;
 }
-.form__choice {
-}
+
 .form__image {
   width: 100%;
   height: 247px;
@@ -209,16 +204,14 @@ button {
   align-items: center;
   justify-content: center;
 }
-.form-button {
-}
+
 .form-button__indent {
   margin-top: 50px;
   margin-left: auto;
   display: flex;
   align-items: center;
 }
-.button {
-}
+
 .form-button__btn-next {
   display: block;
   max-width: 171px;
@@ -237,8 +230,7 @@ button {
   top: 19px;
   right: 30px;
 }
-.button--primary {
-}
+
 /*-!Первый Fielset с первого экрана--*/
 
 /*---Второй Fielset со второго экрана--*/
@@ -304,12 +296,6 @@ button {
   top: -3px;
   left: 0;
 }
-.form-button {
-}
-.form-button__indent {
-}
-.button {
-}
 .form-button__btn-prev {
   width: 48px;
   height: 48px;
@@ -326,11 +312,128 @@ button {
   margin-left: auto;
   background-color: transparent;
 }
-.button--primary {
-}
-.form-button__btn-next {
-}
+
 /*-!Второй Fielset со второго экрана--*/
+/*--Последний Fieldset c последнего экрана---*/
+.sending-message__title {
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 37px;
+  color: #595354;
+  margin-bottom: 15px;
+}
+.sending-message__text {
+  line-height: 22px;
+  color: #595354;
+  margin-bottom: 15px;
+}
+.sending-message__result {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #f65d77;
+  margin-bottom: 27px;
+}
+.sending-message__bonus {
+  color: #595354;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 17px;
+}
+.sending-message__wrapper {
+  position: relative;
+  max-width: 325px;
+  margin-bottom: 17px;
+}
+.sending-message__wrapper-text {
+  font-family: "Nautilus Pompilius", cursive;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 142.1%;
+  text-align: center;
+  max-width: 235px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin: 0 auto;
+}
+.sending-message__prezent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 610px;
+}
+.quiz-form__size {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 580px;
+  width: 100%;
+  height: 682px;
+  background-color: #f4f4f4;
+}
+.quiz-form__block {
+  max-width: 397px;
+  margin: 155px 0 0 60px;
+}
+.quiz-form__group {
+  margin-bottom: 20px;
+}
+.quiz-form__label {
+  display: block;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.quiz-form__input {
+  background-color: #ffffff;
+  width: 100%;
+  height: 47px;
+  padding: 0 10px;
+  border: 1px solid #595354;
+  border-radius: 5px;
+}
+.quiz-form__select {
+  width: 100%;
+  height: 47px;
+  border-radius: 5px;
+  border: 1px solid #595354;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 15px;
+  background: #ffffff url("../img/down.svg") no-repeat;
+  background-position: 95% 20px;
+}
+.quiz-form__input-policy {
+  opacity: 0;
+  visibility: hidden;
+}
+.quiz-form__label-policy {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+.quiz-form__label-policy::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 1px solid #595354;
+  margin-right: 14px;
+  background-color: #ffffff;
+}
+.quiz-form__input-policy:checked + .quiz-form__label-policy::before {
+  background: #ffffff url("../img/check.svg") center no-repeat;
+  background-size: contain;
+}
+/*-!Последний Fieldset c последнего экрана---*/
 
 /*--Общая правая часть квиза---*/
 .quiz-position {
@@ -376,9 +479,135 @@ button {
   max-width: 210px;
 }
 .quiz-position__image {
-  background-image: url("../img/bg1-img.png");
+  background-image: url("../img/present.png");
   background-repeat: no-repeat;
   max-width: 276px;
   height: 188px;
 }
 /*-!Общая правая часть квиза---*/
+
+/*-----MEDIA-----*/
+@media (max-width: 1250px) {
+  .quiz-form__block {
+    margin: 130px 0 0 60px;
+  }
+  .quiz-form__size {
+    max-width: 500px;
+  }
+  .sending-message__prezent {
+    margin-right: 520px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .sending-message__prezent {
+    display: none;
+  }
+  .sending-message {
+    max-width: 440px;
+  }
+  .quiz-form__size {
+    max-width: 360px;
+  }
+  .quiz-form__block {
+    margin: 100px 0 0 0;
+  }
+  .quiz-form__group,
+  .quiz-form__button {
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  .quiz-form__button {
+    display: block;
+  }
+  .quiz-head__hint {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .quiz-position {
+    display: none;
+  }
+  .quiz-body {
+    padding: 30px 10px;
+  }
+  .form__wrap {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  .form__title {
+    text-align: center;
+  }
+  .quiz-head {
+    padding: 30px 10px;
+    justify-content: center;
+  }
+  .form-button__indent {
+    justify-content: center;
+    margin: 50px auto 0;
+    max-width: 260px;
+  }
+  .form-button__btn-next {
+    margin: 0 !important;
+  }
+  .form-button__btn-prev {
+    margin-left: 0;
+  }
+  .form__column {
+    margin: 0 auto;
+  }
+  .form__column + .form-button__indent {
+    margin-top: 90px;
+  }
+  .quiz-form__size {
+    position: static;
+  }
+  .sending-message {
+    margin: 0 auto;
+  }
+  .quiz-form__block {
+    margin: 40px 0 0 0;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .quiz-form__size {
+    max-width: 100%;
+    height: auto;
+    background-color: transparent;
+  }
+  .quiz-form__group,
+  .quiz-form__button {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .quiz-head__hint {
+    display: none;
+  }
+  .quiz-head {
+    padding: 15px 10px;
+  }
+  .form__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form__label-radio {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+  .quiz {
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form__title {
+    line-height: 24px;
+  }
+  .sending-message__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
